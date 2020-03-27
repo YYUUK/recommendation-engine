@@ -1,0 +1,27 @@
+<style type="text/css">
+   body { background-color: #374954; }
+   select, ul { height: 300px; overflow: auto; width: 120px; border: 2px solid #000; }
+   ul { list-style-type: none; margin: 100px 10px 10px 500px; padding: 20px; overflow-x: hidden; }
+   li { margin: 0; padding: 0; }
+   label { display: block; color: Window ; background-color: #374954; margin: 0; padding: 0; width: 100%; }
+   label:hover { background-color: Highlight; color: HighlightText; }
+   ci { margin: 100px 10px 10px 500px; width: 120px; }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="http://127.0.0.1:3000/" method="POST" enctype="multipart/form-data">
+    <ul>
+       {% for user in payload %}
+          <li><label><input type="checkbox" name="user_name", value="{{ user }}"> user {{ user }} </label></li>
+       {% endfor %}
+    </ul>
+        <ci><input type="submit" action="POST" value="전송"/></ci>
+    </form>
+</body>
+</html>

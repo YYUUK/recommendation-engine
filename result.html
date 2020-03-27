@@ -1,0 +1,25 @@
+<style type="text/css">
+   body { background-color: #374954; }
+   select, ul { height: 70px; overflow: auto; width: 500px; border: 1px solid #000; background-color: #374954; }
+   ul { list-style-type: none; margin: 100px 10px 10px 300px; padding: 20px; overflow-x: hidden; background-color: #374954; }
+   li { margin: 0; padding: 0; }
+   label { display: block; color: white; background-color: #374954;; margin: 0; padding: 0; width: 100%; }
+   label:hover { background-color: Highlight; color: HighlightText; }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="http://127.0.0.1:3000/" method="POST" enctype="multipart/form-data">
+    <ul>
+       {% for movie in payload %}
+          <li><label> {{ movie }} </label></li>
+       {% endfor %}
+    </ul>
+    </form>
+</body>
+</html>
